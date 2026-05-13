@@ -42,7 +42,7 @@ How the app is installable, offline-capable, and shipped to Tencent Cloud EdgeOn
 ```
 
 Icons:
-- Source SVG at `src/assets/icon.svg`; `pnpm icons:build` rasterizes to all sizes + maskable.
+- Source SVG at `src/assets/icon.svg`; `npm run icons:build` rasterizes to all sizes + maskable.
 - Maskable icon honors the 80% safe zone.
 
 ## Service Worker (Workbox via `vite-plugin-pwa`)
@@ -135,11 +135,11 @@ EdgeOne enables Brotli by default for text MIME types. Verify `Content-Encoding:
 
 `.github/workflows/ci.yml`:
 
-1. `pnpm install --frozen-lockfile`
-2. `pnpm lint && pnpm typecheck`
-3. `pnpm test --run`
-4. `pnpm build`
-5. `pnpm test:e2e` against `dist/` via `vite preview`
+1. `npm ci`
+2. `npm run lint && npm run typecheck`
+3. `npm test -- --run`
+4. `npm run build`
+5. `npm run test:e2e` against `dist/` via `vite preview`
 6. Artifact: upload `dist/` as `dist-${{ github.sha }}.zip`
 
 Deploy step (separate workflow, manual approval on `main`):
@@ -154,7 +154,7 @@ Rollbacks: keep the last 5 builds in COS under `releases/<sha>/`. To roll back, 
 ## Local Preview of Built Bundle
 
 ```
-pnpm build && pnpm preview
+npm run build && npm run preview
 ```
 
 `vite preview` serves `dist/` on `:4173` with SPA-fallback. Use this to verify the SW registers and updates correctly.
@@ -168,14 +168,14 @@ Run on the production preview, mobile profile. Target scores:
 - SEO ≥ 90 (not a primary metric, but easy wins)
 - PWA: installable + offline ✔
 
-The `pnpm lighthouse` script (uses `lighthouse-ci`) gates these in CI on `main` only.
+The `npm run lighthouse` script (uses `lighthouse-ci`) gates these in CI on `main` only.
 
 ## Domains and Environments
 
 | Env       | URL                                | Source           |
 | --------- | ---------------------------------- | ---------------- |
-| Local     | `http://localhost:5173`            | `pnpm dev`       |
-| Preview   | `http://localhost:4173`            | `pnpm preview`   |
+| Local     | `http://localhost:5173`            | `npm run dev`     |
+| Preview   | `http://localhost:4173`            | `npm run preview` |
 | Staging   | `https://stg.typing.example.com`   | `develop` branch |
 | Prod      | `https://typing.example.com`       | `main` tag       |
 

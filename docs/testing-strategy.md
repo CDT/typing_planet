@@ -24,7 +24,7 @@ The engine is **pure TS** and trivially testable; expect ≥ 95% coverage there.
 | Performance    | **Lighthouse CI**, custom Vitest bench         | See [performance-budget.md](./performance-budget.md) |
 | Lint           | **ESLint** (typescript-eslint, react-hooks, jsx-a11y), **Prettier** | `.eslintrc.cjs` |
 
-`pnpm test` runs Vitest. `pnpm test:e2e` runs Playwright against `vite preview`.
+`npm test` runs Vitest. `npm run test:e2e` runs Playwright against `vite preview`.
 
 ## Unit Tests
 

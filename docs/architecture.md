@@ -18,7 +18,7 @@ How the app is structured, built, and deployed. Pairs with [data-model.md](./dat
 | i18n             | **react-i18next**                                     | Lazy locale chunks; ICU formatting.                          |
 | Testing          | **Vitest** + **React Testing Library** + **Playwright** | Unit, component, E2E.                                      |
 | Linting          | **ESLint** (typescript-eslint, react-hooks) + **Prettier** | One source of truth for style.                          |
-| Package manager  | **pnpm**                                              | Fast, disk-efficient; locked.                                |
+| Package manager  | **npm**                                               | Ships with Node; zero install friction; lockfile committed.  |
 | Node             | **20 LTS**                                            | Match CI and EdgeOne build env.                              |
 
 No backend. No SSR. The build is fully static.
@@ -165,12 +165,12 @@ Pure-function engine keeps tests fast and the UI thin. The UI never owns engine 
 
 ## Build & Deploy (summary)
 
-- `pnpm dev` — Vite dev server on `:5173`.
-- `pnpm build` — production build → `dist/`.
-- `pnpm preview` — serve the built bundle locally.
-- `pnpm test` — Vitest unit + component.
-- `pnpm test:e2e` — Playwright.
-- `pnpm lint` / `pnpm typecheck`.
+- `npm run dev` — Vite dev server on `:5173`.
+- `npm run build` — production build → `dist/`.
+- `npm run preview` — serve the built bundle locally.
+- `npm test` — Vitest unit + component.
+- `npm run test:e2e` — Playwright.
+- `npm run lint` / `npm run typecheck`.
 
 Deployment to Tencent Cloud EdgeOne — see [pwa-and-deploy.md](./pwa-and-deploy.md) for headers, project config, and CI.
 

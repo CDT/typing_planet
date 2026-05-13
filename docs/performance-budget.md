@@ -95,4 +95,4 @@ Runs on PRs touching `src/`, `vite.config.ts`, `tailwind.config.ts`, or `public/
 
 ## Bundle Analysis
 
-`pnpm build:analyze` runs the build with `rollup-plugin-visualizer` and opens an interactive treemap. Use to investigate any budget regression before merging.
+`npm run build:analyze` runs the build with `rollup-plugin-visualizer` and opens an interactive treemap. Use to investigate any budget regression before merging.

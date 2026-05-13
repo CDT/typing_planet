@@ -29,28 +29,28 @@ In this order:
 
 ## Tech stack (short version)
 
-Vite + React 18 + TypeScript (strict) + Tailwind + Zustand + IndexedDB (via `idb`) + react-i18next + Framer Motion + Vitest + Playwright. pnpm. No backend.
+Vite + React 18 + TypeScript (strict) + Tailwind + Zustand + IndexedDB (via `idb`) + react-i18next + Framer Motion + Vitest + Playwright. npm. No backend.
 
 Full rationale in [docs/architecture.md](./docs/architecture.md). **Do not introduce new core libraries without updating that doc first.**
 
 ## Commands
 
 ```bash
-pnpm install               # bootstrap
-pnpm dev                   # vite dev server :5173
-pnpm build                 # production build to dist/
-pnpm preview               # serve dist/ on :4173
-pnpm test                  # vitest unit + component
-pnpm test:e2e              # playwright against preview
-pnpm lint                  # eslint
-pnpm typecheck             # tsc --noEmit
-pnpm content:validate      # validate lesson JSON against schema
-pnpm i18n:check            # ensure zh-CN and en-US have same keys
-pnpm build:analyze         # bundle treemap
-pnpm lighthouse            # local lighthouse CI run against preview
+npm install                  # bootstrap
+npm run dev                  # vite dev server :5173
+npm run build                # production build to dist/
+npm run preview              # serve dist/ on :4173
+npm test                     # vitest unit + component
+npm run test:e2e             # playwright against preview
+npm run lint                 # eslint
+npm run typecheck            # tsc --noEmit
+npm run content:validate     # validate lesson JSON against schema
+npm run i18n:check           # ensure zh-CN and en-US have same keys
+npm run build:analyze        # bundle treemap
+npm run lighthouse           # local lighthouse CI run against preview
 ```
 
-CI runs `lint && typecheck && test && build && test:e2e` on every PR.
+CI uses `npm ci` for installs, then runs `lint && typecheck && test && build && test:e2e` on every PR.
 
 ## Folder map
 
@@ -94,12 +94,12 @@ See [docs/architecture.md](./docs/architecture.md) §folder-layout for the canon
 
 ### Lesson content
 - Add lessons by dropping a JSON file in the right planet folder. Schema in [docs/content-spec.md](./docs/content-spec.md).
-- Run `pnpm content:validate` before committing.
+- Run `npm run content:validate` before committing.
 - New badges require both a JSON entry and a rule in `src/features/badges/rules.ts`.
 
 ### i18n
 - No raw strings in JSX. Use `t('key')`. Add the key to both `zh-CN.json` and `en-US.json`.
-- `pnpm i18n:check` enforces parity.
+- `npm run i18n:check` enforces parity.
 
 ### Accessibility
 - All interactive elements must be keyboard-reachable with a visible `:focus-visible` ring.

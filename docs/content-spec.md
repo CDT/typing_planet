@@ -19,7 +19,7 @@ src/content/
 └── badges.json              ← badge definitions
 ```
 
-The manifest is produced by `scripts/build-content.ts` from `import.meta.glob('./**/*.json')` at build time. Validation runs as part of `pnpm typecheck`.
+The manifest is produced by `scripts/build-content.ts` from `import.meta.glob('./**/*.json')` at build time. Validation runs as part of `npm run typecheck`.
 
 ## Lesson JSON Schema
 
@@ -155,7 +155,7 @@ Uppercase letters map to the lowercase letter's finger; Shift is the opposite-ha
 
 1. Drop the JSON in the right planet folder using the file-naming convention.
 2. Update `targetWpm` per planet WPM range.
-3. Run `pnpm content:validate` (alias to the schema check).
-4. Run `pnpm dev` and play the lesson end-to-end.
+3. Run `npm run content:validate` (alias to the schema check).
+4. Run `npm run dev` and play the lesson end-to-end.
 
 No code changes needed — the manifest is regenerated on each build.

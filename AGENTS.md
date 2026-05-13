@@ -17,7 +17,7 @@ The design specs in [`docs/`](./docs/) are the source of truth. Read [docs/requi
 3. **Stay inside the current phase** in [docs/roadmap.md](./docs/roadmap.md). If your task expands scope, raise it instead of silently widening.
 4. **Run the local checks** before declaring done:
    ```bash
-   pnpm lint && pnpm typecheck && pnpm test --run && pnpm build
+   npm run lint && npm run typecheck && npm test -- --run && npm run build
    ```
 
 ## Decision-making boundary
@@ -55,8 +55,8 @@ Co-Authored-By: <your-agent-name> <noreply@example.com>
 
 A task is done when:
 - The change matches the relevant doc (or the doc is updated and the change matches).
-- `pnpm lint && pnpm typecheck && pnpm test --run && pnpm build` all pass locally.
-- For UI changes: manually exercised in `pnpm dev` and described in the PR.
+- `npm run lint && npm run typecheck && npm test -- --run && npm run build` all pass locally.
+- For UI changes: manually exercised in `npm run dev` and described in the PR.
 - For perf-sensitive changes: bundle budget still passes; no regressions in `tests/perf/`.
 - The PR description references the doc(s) and phase it relates to.
 
