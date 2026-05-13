@@ -1,0 +1,14 @@
+{
+  "id": "terra.l03",
+  "planet": "terra",
+  "order": 3,
+  "type": "keys",
+  "title": { "zh-CN": "加入 S 与 L", "en-US": "Add S and L" },
+  "focusKeys": ["f", "j", "s", "l"],
+  "targetWpm": 15,
+  "content": [
+    "sl sl sl sl sl sl sl sl",
+    "fsl jks fsl jks fsl jks",
+    "ssl llf jjs llf ssl jjs"
+  ]
+}

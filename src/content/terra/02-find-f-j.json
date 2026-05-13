@@ -1,0 +1,14 @@
+{
+  "id": "terra.l02",
+  "planet": "terra",
+  "order": 2,
+  "type": "keys",
+  "title": { "zh-CN": "查找 F 与 J", "en-US": "Find F and J" },
+  "focusKeys": ["f", "j"],
+  "targetWpm": 14,
+  "content": [
+    "fjf jfj fjf jfj fjf jfj",
+    "ffj jjf ffj jjf ffj jjf",
+    "jjfj ffjj jfjf fjfj"
+  ]
+}

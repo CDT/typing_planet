@@ -1,0 +1,14 @@
+{
+  "id": "terra.l06",
+  "planet": "terra",
+  "order": 6,
+  "type": "keys",
+  "title": { "zh-CN": "主行混合", "en-US": "Home row mix" },
+  "focusKeys": ["a", "s", "d", "f", "j", "k", "l", ";"],
+  "targetWpm": 18,
+  "content": [
+    "asdf jkl; asdf jkl; asdf",
+    "ajsk dflf ;la sdkj afjl",
+    "all ask add asks lads"
+  ]
+}

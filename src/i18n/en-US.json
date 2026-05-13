@@ -1,0 +1,83 @@
+{
+  "common": {
+    "back": "Back",
+    "start": "Start",
+    "continue": "Continue",
+    "retry": "Retry",
+    "next": "Next lesson",
+    "pause": "Pause",
+    "resume": "Resume",
+    "quit": "Quit",
+    "locked": "Locked"
+  },
+  "nav": {
+    "galaxy": "Galaxy",
+    "me": "Me",
+    "settings": "Settings"
+  },
+  "map": {
+    "greeting": "Hi there",
+    "streak_one": "{{count}}-day streak",
+    "streak_other": "{{count}}-day streak",
+    "level": "Lv. {{level}}",
+    "xpRemaining": "{{xp}} XP"
+  },
+  "planet": {
+    "lessons_one": "{{count}} lesson",
+    "lessons_other": "{{count}} lessons",
+    "mastered": "Mastered",
+    "available": "Available",
+    "lockedHint": "Finish the previous planet to unlock"
+  },
+  "practice": {
+    "countdown": "{{n}}",
+    "go": "Go!",
+    "hud": {
+      "wpm": "WPM",
+      "accuracy": "Accuracy",
+      "time": "Time"
+    },
+    "pausedTitle": "Paused",
+    "pausedHint": "Tap Resume to continue"
+  },
+  "results": {
+    "title": "Lesson complete",
+    "wpm": "WPM",
+    "accuracy": "Accuracy",
+    "time": "Time",
+    "xpEarned": "+{{xp}} XP",
+    "newBest": "New best!",
+    "backToPlanet": "Back to planet"
+  },
+  "me": {
+    "title": "Me",
+    "lifetime": "Lifetime",
+    "sessions": "Sessions",
+    "chars": "Chars typed",
+    "avgWpm": "Avg WPM",
+    "badges": "Badges ({{earned}}/{{total}})"
+  },
+  "settings": {
+    "title": "Settings",
+    "display": "Display",
+    "practice": "Practice",
+    "data": "Data",
+    "about": "About",
+    "language": "Language",
+    "theme": "Theme",
+    "themeSystem": "System",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "sound": "Sound effects",
+    "haptics": "Haptics",
+    "showKeyboard": "Show virtual keyboard",
+    "showFingerOverlay": "Finger overlay",
+    "reducedMotion": "Reduced motion",
+    "reset": "Reset all data",
+    "resetConfirm": "Confirm reset (irreversible)",
+    "version": "Version"
+  },
+  "splash": {
+    "title": "Typing Planet"
+  }
+}

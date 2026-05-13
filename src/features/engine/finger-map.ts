@@ -1,0 +1,83 @@
+import type { Finger } from "@/types";
+
+export const FINGER_MAP: Record<string, Finger> = {
+  "`": "lp",
+  "1": "lp",
+  q: "lp",
+  a: "lp",
+  z: "lp",
+  "2": "lr",
+  w: "lr",
+  s: "lr",
+  x: "lr",
+  "3": "lm",
+  e: "lm",
+  d: "lm",
+  c: "lm",
+  "4": "li",
+  r: "li",
+  f: "li",
+  v: "li",
+  "5": "li",
+  t: "li",
+  g: "li",
+  b: "li",
+  "6": "ri",
+  y: "ri",
+  h: "ri",
+  n: "ri",
+  "7": "ri",
+  u: "ri",
+  j: "ri",
+  m: "ri",
+  "8": "rm",
+  i: "rm",
+  k: "rm",
+  ",": "rm",
+  "9": "rr",
+  o: "rr",
+  l: "rr",
+  ".": "rr",
+  "0": "rp",
+  "-": "rp",
+  "=": "rp",
+  p: "rp",
+  "[": "rp",
+  "]": "rp",
+  "\\": "rp",
+  ";": "rp",
+  "'": "rp",
+  "/": "rp",
+  " ": "rt",
+};
+
+export function fingerFor(char: string): Finger {
+  const c = char.toLowerCase();
+  return FINGER_MAP[c] ?? "rt";
+}
+
+export const ALL_FINGERS: Finger[] = [
+  "lp",
+  "lr",
+  "lm",
+  "li",
+  "ri",
+  "rm",
+  "rr",
+  "rp",
+  "lt",
+  "rt",
+];
+
+export const FINGER_COLOR: Record<Finger, string> = {
+  lp: "#FF6B6B",
+  lr: "#F7B500",
+  lm: "#3DDC97",
+  li: "#4FC3F7",
+  ri: "#7C8BFF",
+  rm: "#B98CFF",
+  rr: "#FF85B5",
+  rp: "#FFB347",
+  lt: "#9AA3BB",
+  rt: "#9AA3BB",
+};
